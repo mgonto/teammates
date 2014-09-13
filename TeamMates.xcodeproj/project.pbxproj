@@ -27,6 +27,8 @@
 		9DE836D619C4CF1300536D15 /* ParseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836D519C4CF1300536D15 /* ParseExtensions.swift */; };
 		9DE836D819C4D14600536D15 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836D719C4D14600536D15 /* Model.swift */; };
 		9DE836DA19C4D1EA00536D15 /* ParseSerializerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836D919C4D1EA00536D15 /* ParseSerializerHelper.swift */; };
+		9DE836DD19C4D6ED00536D15 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836DC19C4D6ED00536D15 /* SessionService.swift */; };
+		9DE836DF19C4D7C600536D15 /* ParseSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836DE19C4D7C600536D15 /* ParseSessionService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +67,8 @@
 		9DE836D519C4CF1300536D15 /* ParseExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseExtensions.swift; sourceTree = "<group>"; };
 		9DE836D719C4D14600536D15 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9DE836D919C4D1EA00536D15 /* ParseSerializerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSerializerHelper.swift; sourceTree = "<group>"; };
+		9DE836DC19C4D6ED00536D15 /* SessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
+		9DE836DE19C4D7C600536D15 /* ParseSessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSessionService.swift; sourceTree = "<group>"; };
 		EF925A1BC878413B8BB35E38 /* libPods-TeamMates.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeamMates.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -110,6 +114,7 @@
 		9D1A037E19C48EFB004098CA /* TeamMates */ = {
 			isa = PBXGroup;
 			children = (
+				9DE836DB19C4D6C200536D15 /* Services */,
 				9DE836D419C4CEF600536D15 /* Extensions */,
 				9DE836D119C4CB0700536D15 /* Serializer */,
 				9DE836BF19C4A36F00536D15 /* Repositories */,
@@ -197,6 +202,15 @@
 				9DE836D519C4CF1300536D15 /* ParseExtensions.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		9DE836DB19C4D6C200536D15 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9DE836DC19C4D6ED00536D15 /* SessionService.swift */,
+				9DE836DE19C4D7C600536D15 /* ParseSessionService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 		C3ED6B00F7AA45A7B42B062E /* Frameworks */ = {
@@ -346,6 +360,8 @@
 				9DE836C919C4A95E00536D15 /* Application.swift in Sources */,
 				9DE836D019C4C9FA00536D15 /* ParsePlayerGroupRepository.swift in Sources */,
 				9D1A038619C48EFB004098CA /* SecondViewController.swift in Sources */,
+				9DE836DD19C4D6ED00536D15 /* SessionService.swift in Sources */,
+				9DE836DF19C4D7C600536D15 /* ParseSessionService.swift in Sources */,
 				9D1A03A619C4927A004098CA /* DayOfWeek.swift in Sources */,
 				9DE836CB19C4AEBA00536D15 /* AddPlayerGroupViewController.swift in Sources */,
 				9D1A03B019C4995E004098CA /* PlayerGroupTableViewController.swift in Sources */,
