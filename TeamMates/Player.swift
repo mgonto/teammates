@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Player: Hashable {
+class Player: Model, Hashable {
     
     var firstName: String
     var lastName: String

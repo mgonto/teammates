@@ -8,7 +8,7 @@
 
 import Foundation
 
-class PlayerGroup {
+class PlayerGroup: Model {
 
     var dayOfWeek: DayOfWeek
     var hour: Int

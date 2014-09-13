@@ -3,6 +3,7 @@
 
 target "TeamMates" do
   pod 'CocoaLumberjack'
+  pod 'Parse-iOS-SDK', '~> 1.2'
 end
 
 target "TeamMatesTests" do

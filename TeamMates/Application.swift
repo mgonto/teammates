@@ -12,7 +12,7 @@ private let _application = Application()
 
 class Application {
     
-    let playerGroupRepository: PlayerGroupRepository = InMemoryPlayerGroupRepository()
+    let playerGroupRepository: PlayerGroupRepository = ParsePlayerGroupRepository()
     
     class var sharedInstance: Application {
         return _application
