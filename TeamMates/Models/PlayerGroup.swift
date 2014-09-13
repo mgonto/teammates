@@ -14,6 +14,7 @@ class PlayerGroup: Model {
     var hour: Int
     var minutes: Int
     var name: String
+    var requiredPlayers : Int = 10
     
     var members: [Player] {
         get {
@@ -29,6 +30,14 @@ class PlayerGroup: Model {
         self.minutes = minutes
         self.dayOfWeek = dayOfWeek
         self.membersDict = Dictionary()
+        
+        super.init()
+        let cono = Player(firstName: "Mariano", lastName: "Cortesi", username: "cono")
+        self.addMember(cono)
+        self.setAsPlayer(cono)
+        self.addMember(Player(firstName: "Hernan", lastName: "Zalazar", username: "zala"))
+        self.addMember(Player(firstName: "Martin", lastName: "Gontovnikas", username: "gonto"))
+        self.addMember(Player(firstName: "Guido", lastName: "Maruchi", username: "guido"))
     }
     
     func addMember(member: Player) {
@@ -52,5 +61,8 @@ class PlayerGroup: Model {
         return Array(membersDict.keys.filter({ (player) in return !(self.membersDict[player]!) }))
     }
     
+    func getFormattedDate() -> String {
+        return "\(self.dayOfWeek.description) \(self.hour):\(self.minutes)"
+    }
     
 }

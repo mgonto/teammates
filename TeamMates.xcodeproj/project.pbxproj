@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01C4FD6119C4C9810036F113 /* PlayerGroupDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4FD6019C4C9810036F113 /* PlayerGroupDetailController.swift */; };
+		01C4FD6119C4C9810036F113 /* MatchPlayersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4FD6019C4C9810036F113 /* MatchPlayersListViewController.swift */; };
+		01C4FD6319C4EB0D0036F113 /* PlayerGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4FD6219C4EB0D0036F113 /* PlayerGroupViewController.swift */; };
 		089EA4CE331242BBB00F2BCD /* libPods-TeamMates.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF925A1BC878413B8BB35E38 /* libPods-TeamMates.a */; };
 		9AAD58C419C4EA38007F1617 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD58C319C4EA38007F1617 /* LoginViewController.swift */; };
 		9AAD58C619C4EB1F007F1617 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD58C519C4EB1F007F1617 /* User.swift */; };
 		9AAD58C819C4ED98007F1617 /* UserSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD58C719C4ED98007F1617 /* UserSerializer.swift */; };
 		9AAD58CA19C4F165007F1617 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD58C919C4F165007F1617 /* MainTabBarViewController.swift */; };
 		9D1A038219C48EFB004098CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A038119C48EFB004098CA /* AppDelegate.swift */; };
-		9D1A038619C48EFB004098CA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A038519C48EFB004098CA /* SecondViewController.swift */; };
 		9D1A038919C48EFB004098CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1A038719C48EFB004098CA /* Main.storyboard */; };
 		9D1A038B19C48EFB004098CA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D1A038A19C48EFB004098CA /* Images.xcassets */; };
 		9D1A038E19C48EFB004098CA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9D1A038C19C48EFB004098CA /* LaunchScreen.xib */; };
@@ -47,7 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01C4FD6019C4C9810036F113 /* PlayerGroupDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerGroupDetailController.swift; path = Controllers/PlayerGroupDetailController.swift; sourceTree = "<group>"; };
+		01C4FD6019C4C9810036F113 /* MatchPlayersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchPlayersListViewController.swift; path = Controllers/MatchPlayersListViewController.swift; sourceTree = "<group>"; };
+		01C4FD6219C4EB0D0036F113 /* PlayerGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerGroupViewController.swift; path = Controllers/PlayerGroupViewController.swift; sourceTree = "<group>"; };
 		97C2ECE573BB496AA1CD23B0 /* Pods-TeamMates.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamMates.xcconfig"; path = "Pods/Pods-TeamMates.xcconfig"; sourceTree = "<group>"; };
 		9AAD58C319C4EA38007F1617 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
 		9AAD58C519C4EB1F007F1617 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -56,7 +57,6 @@
 		9D1A037C19C48EFB004098CA /* TeamMates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamMates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1A038019C48EFB004098CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1A038119C48EFB004098CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9D1A038519C48EFB004098CA /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		9D1A038819C48EFB004098CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9D1A038A19C48EFB004098CA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		9D1A038D19C48EFB004098CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -131,7 +131,6 @@
 				9D1A03AC19C498FA004098CA /* Controllers */,
 				9D1A03A719C49572004098CA /* Models */,
 				9D1A038119C48EFB004098CA /* AppDelegate.swift */,
-				9D1A038519C48EFB004098CA /* SecondViewController.swift */,
 				9D1A038719C48EFB004098CA /* Main.storyboard */,
 				9D1A038A19C48EFB004098CA /* Images.xcassets */,
 				9D1A038C19C48EFB004098CA /* LaunchScreen.xib */,
@@ -184,9 +183,10 @@
 			children = (
 				9D1A03AF19C4995E004098CA /* PlayerGroupTableViewController.swift */,
 				9DE836CA19C4AEBA00536D15 /* AddPlayerGroupViewController.swift */,
-				01C4FD6019C4C9810036F113 /* PlayerGroupDetailController.swift */,
 				9AAD58C319C4EA38007F1617 /* LoginViewController.swift */,
 				9AAD58C919C4F165007F1617 /* MainTabBarViewController.swift */,
+				01C4FD6019C4C9810036F113 /* MatchPlayersListViewController.swift */,
+				01C4FD6219C4EB0D0036F113 /* PlayerGroupViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -290,6 +290,7 @@
 					};
 					9D1A039219C48EFB004098CA = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = EXT38NEES7;
 						TestTargetID = 9D1A037B19C48EFB004098CA;
 					};
 				};
@@ -372,12 +373,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AAD58C419C4EA38007F1617 /* LoginViewController.swift in Sources */,
+				01C4FD6319C4EB0D0036F113 /* PlayerGroupViewController.swift in Sources */,
 				9DE836D319C4CB3C00536D15 /* PlayerGroupParseSerializer.swift in Sources */,
 				9DE836C919C4A95E00536D15 /* Application.swift in Sources */,
 				9AAD58CA19C4F165007F1617 /* MainTabBarViewController.swift in Sources */,
 				9DE836D019C4C9FA00536D15 /* ParsePlayerGroupRepository.swift in Sources */,
 				9AAD58C819C4ED98007F1617 /* UserSerializer.swift in Sources */,
-				9D1A038619C48EFB004098CA /* SecondViewController.swift in Sources */,
 				9DE836DD19C4D6ED00536D15 /* SessionService.swift in Sources */,
 				9DE836DF19C4D7C600536D15 /* ParseSessionService.swift in Sources */,
 				9D1A03A619C4927A004098CA /* DayOfWeek.swift in Sources */,
@@ -387,7 +388,7 @@
 				9DE836C119C4A39B00536D15 /* PlayerGroupRepository.swift in Sources */,
 				9D1A038219C48EFB004098CA /* AppDelegate.swift in Sources */,
 				9D1A03A419C491A9004098CA /* PlayerGroup.swift in Sources */,
-				01C4FD6119C4C9810036F113 /* PlayerGroupDetailController.swift in Sources */,
+				01C4FD6119C4C9810036F113 /* MatchPlayersListViewController.swift in Sources */,
 				9DE836C519C4A52200536D15 /* InMemoryPlayerGroupRepository.swift in Sources */,
 				9DE836D619C4CF1300536D15 /* ParseExtensions.swift in Sources */,
 				9D1A03A919C495EA004098CA /* Player.swift in Sources */,
