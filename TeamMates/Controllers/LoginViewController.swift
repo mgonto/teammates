@@ -28,19 +28,13 @@ class LoginViewController: UIViewController {
             if let error = errorOpt {
                 NSLog("There was an error \(error)")
             } else {
+                NSLog("User \(userOpt?.username) successfully logged in")
+                NSLog("Email \(userOpt?.email)")
+                NSLog("First name \(userOpt?.firstName)")
+                NSLog("Last name \(userOpt?.lastName)")
                 self.dismissViewControllerAnimated(true, completion: nil)
             }
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
