@@ -17,13 +17,6 @@ class InMemoryPlayerGroupRepository: PlayerGroupRepository {
         
         let group = PlayerGroup("Test group", 20, 30, DayOfWeek.Monday)
         
-        let cono = Player(firstName: "Mariano", lastName: "Cortesi", username: "cono")
-        group.addMember(cono)
-        group.setAsPlayer(cono)
-        group.addMember(Player(firstName: "Hernan", lastName: "Zalazar", username: "zala"))
-        group.addMember(Player(firstName: "Martin", lastName: "Gontovnikas", username: "gonto"))
-        group.addMember(Player(firstName: "Guido", lastName: "Maruchi", username: "guido"))
-        
         groups.append(group)
     }
     

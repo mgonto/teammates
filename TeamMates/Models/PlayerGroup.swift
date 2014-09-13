@@ -32,12 +32,6 @@ class PlayerGroup: Model {
         self.membersDict = Dictionary()
         
         super.init()
-        let cono = Player(firstName: "Mariano", lastName: "Cortesi", username: "cono")
-        self.addMember(cono)
-        self.setAsPlayer(cono)
-        self.addMember(Player(firstName: "Hernan", lastName: "Zalazar", username: "zala"))
-        self.addMember(Player(firstName: "Martin", lastName: "Gontovnikas", username: "gonto"))
-        self.addMember(Player(firstName: "Guido", lastName: "Maruchi", username: "guido"))
     }
     
     func addMember(member: Player) {
