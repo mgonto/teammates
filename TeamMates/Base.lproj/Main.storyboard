@@ -72,7 +72,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UqF-7j-4IJ">
-                                <rect key="frame" x="75" y="72" width="509" height="30"/>
+                                <rect key="frame" x="75" y="72" width="493" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -102,22 +102,27 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="JQr-Wg-wAk" firstAttribute="top" secondItem="UqF-7j-4IJ" secondAttribute="bottom" constant="8" id="1u0-gz-FmP"/>
-                            <constraint firstItem="BSV-DT-1LC" firstAttribute="leading" secondItem="7tt-lt-2js" secondAttribute="leadingMargin" id="4cw-qe-T3l"/>
+                            <constraint firstItem="BSV-DT-1LC" firstAttribute="leading" secondItem="7tt-lt-2js" secondAttribute="leading" constant="16" id="4cw-qe-T3l"/>
                             <constraint firstItem="UqF-7j-4IJ" firstAttribute="top" secondItem="pGk-Ld-omS" secondAttribute="bottom" constant="8" id="5pJ-NK-iRJ"/>
                             <constraint firstItem="SwS-Op-pXc" firstAttribute="leading" secondItem="JQr-Wg-wAk" secondAttribute="leading" id="COm-W8-TrI"/>
                             <constraint firstItem="56w-wc-fJT" firstAttribute="top" secondItem="JQr-Wg-wAk" secondAttribute="bottom" constant="8" id="I6f-65-zc2"/>
                             <constraint firstItem="SwS-Op-pXc" firstAttribute="top" secondItem="pGk-Ld-omS" secondAttribute="bottom" constant="8" id="IZk-ST-tqz"/>
                             <constraint firstAttribute="trailingMargin" secondItem="56w-wc-fJT" secondAttribute="trailing" id="ZkF-IM-voq"/>
-                            <constraint firstItem="SwS-Op-pXc" firstAttribute="leading" secondItem="7tt-lt-2js" secondAttribute="leadingMargin" id="af1-Nk-6JG"/>
+                            <constraint firstItem="SwS-Op-pXc" firstAttribute="leading" secondItem="7tt-lt-2js" secondAttribute="leading" constant="16" id="af1-Nk-6JG"/>
                             <constraint firstItem="UqF-7j-4IJ" firstAttribute="leading" secondItem="SwS-Op-pXc" secondAttribute="trailing" constant="8" id="fLI-QR-nEi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="UqF-7j-4IJ" secondAttribute="trailing" id="k5A-gh-2Oc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UqF-7j-4IJ" secondAttribute="trailing" constant="16" id="k5A-gh-2Oc"/>
                             <constraint firstItem="JQr-Wg-wAk" firstAttribute="leading" secondItem="7tt-lt-2js" secondAttribute="leadingMargin" id="mYX-Db-g8q"/>
                             <constraint firstItem="cDD-X4-R0I" firstAttribute="top" secondItem="BSV-DT-1LC" secondAttribute="bottom" constant="129" id="njJ-MN-daM"/>
                             <constraint firstItem="SwS-Op-pXc" firstAttribute="baseline" secondItem="UqF-7j-4IJ" secondAttribute="baseline" id="q61-uz-m2R"/>
                             <constraint firstAttribute="trailingMargin" secondItem="BSV-DT-1LC" secondAttribute="trailing" constant="-16" id="vYd-Ir-0N2"/>
                             <constraint firstItem="BSV-DT-1LC" firstAttribute="top" secondItem="56w-wc-fJT" secondAttribute="bottom" constant="8" id="weK-qG-jEc"/>
-                            <constraint firstItem="56w-wc-fJT" firstAttribute="leading" secondItem="7tt-lt-2js" secondAttribute="leadingMargin" id="zT9-2c-4Y3"/>
+                            <constraint firstItem="56w-wc-fJT" firstAttribute="leading" secondItem="7tt-lt-2js" secondAttribute="leading" constant="16" id="zT9-2c-4Y3"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="COm-W8-TrI"/>
+                            </mask>
+                        </variation>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="min-TX-wcy" appends="YES" id="cS4-wa-OCL"/>
                         </connections>
@@ -125,7 +130,7 @@
                     <navigationItem key="navigationItem" title="Add new group" id="KM9-wg-mip">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="qpc-ec-mWJ">
                             <connections>
-                                <segue destination="Fie-sE-hPx" kind="unwind" identifier="goToPlayerGroupList" unwindAction="unwindFromAddPlayerGroup:" id="0Sj-C7-kFW"/>
+                                <segue destination="Fie-sE-hPx" kind="unwind" identifier="" unwindAction="unwindFromAddPlayerGroup:" id="0Sj-C7-kFW"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="p4E-gV-uyo">
