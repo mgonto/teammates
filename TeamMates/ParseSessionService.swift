@@ -40,8 +40,10 @@ class ParseSessionService: SessionService {
         })   
     }
     
-    func currentUser() -> User? {
-        return user
+    var currentUser : User? {
+        get {
+            return User.fromParseUser(currentFBUser!)
+        }
     }
     
     func registerFacebookURLHandler(url: NSURL, _ application: String) -> Bool {

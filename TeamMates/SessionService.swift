@@ -20,6 +20,8 @@ protocol SessionService {
     
     func login(callback : (NSError?, User?) -> ())
     
-    func currentUser() -> User?
+    var currentUser : User? {
+        get
+    }
     
 }
