@@ -224,6 +224,7 @@
 				TargetAttributes = {
 					9D1A037B19C48EFB004098CA = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = VTRRB2X9S3;
 					};
 					9D1A039219C48EFB004098CA = {
 						CreatedOnToolsVersion = 6.0;
@@ -441,7 +442,9 @@
 			baseConfigurationReference = 97C2ECE573BB496AA1CD23B0 /* Pods-TeamMates.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TeamMates/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -452,7 +455,9 @@
 			baseConfigurationReference = 97C2ECE573BB496AA1CD23B0 /* Pods-TeamMates.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TeamMates/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

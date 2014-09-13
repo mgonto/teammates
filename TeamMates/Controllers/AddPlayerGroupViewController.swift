@@ -14,6 +14,8 @@ class AddPlayerGroupViewController: UIViewController, UIPickerViewDataSource, UI
     @IBOutlet weak var dayOfWeekPickerView: UIPickerView!
     @IBOutlet weak var hourPickerView: UIDatePicker!
     
+    let playerGroupRepository = Application.sharedInstance.playerGroupRepository
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.dayOfWeekPickerView.delegate = self
@@ -43,6 +45,27 @@ class AddPlayerGroupViewController: UIViewController, UIPickerViewDataSource, UI
     
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
         return DayOfWeek.fromNumber(row).description
+    }
+    
+    @IBAction func onTapOnScreen(sender: AnyObject) {
+        self.nameTextField.resignFirstResponder()
+    }
+    
+    @IBAction func createGroup(sender: AnyObject) {
+        let date = self.hourPickerView.date
+        let components = NSCalendar.currentCalendar().components(NSCalendarUnit.HourCalendarUnit | NSCalendarUnit.MinuteCalendarUnit, fromDate: date)
+        let dayNumber = self.dayOfWeekPickerView.selectedRowInComponent(0)
+        let dayOfWeek = DayOfWeek.fromNumber(dayNumber)
+        var group = PlayerGroup(self.nameTextField.text, components.hour, components.minute, dayOfWeek)
+        playerGroupRepository.save(group, callback: { (errorOpt, groupOpt) -> () in
+            if let error = errorOpt {
+                NSLog("There was an error creating a group \(error)")
+            } else {
+                self.performSegueWithIdentifier("goToPlayerGroupList", sender: self)
+            }
+            
+        })
+        
     }
     
     /*

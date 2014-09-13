@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -98,6 +99,7 @@
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="JQr-Wg-wAk" firstAttribute="top" secondItem="UqF-7j-4IJ" secondAttribute="bottom" constant="8" id="1u0-gz-FmP"/>
                             <constraint firstItem="BSV-DT-1LC" firstAttribute="leading" secondItem="7tt-lt-2js" secondAttribute="leadingMargin" id="4cw-qe-T3l"/>
@@ -116,23 +118,32 @@
                             <constraint firstItem="BSV-DT-1LC" firstAttribute="top" secondItem="56w-wc-fJT" secondAttribute="bottom" constant="8" id="weK-qG-jEc"/>
                             <constraint firstItem="56w-wc-fJT" firstAttribute="leading" secondItem="7tt-lt-2js" secondAttribute="leadingMargin" id="zT9-2c-4Y3"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="min-TX-wcy" appends="YES" id="cS4-wa-OCL"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Add new group" id="KM9-wg-mip">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="qpc-ec-mWJ">
                             <connections>
-                                <segue destination="Fie-sE-hPx" kind="unwind" unwindAction="unwindFromAddPlayerGroup:" id="0Sj-C7-kFW"/>
+                                <segue destination="Fie-sE-hPx" kind="unwind" identifier="goToPlayerGroupList" unwindAction="unwindFromAddPlayerGroup:" id="0Sj-C7-kFW"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="p4E-gV-uyo"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="p4E-gV-uyo">
+                            <connections>
+                                <action selector="createGroup:" destination="EBD-Xx-W0b" id="1OO-Dd-JSN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dayOfWeekPickerView" destination="56w-wc-fJT" id="XrG-Na-AoT"/>
                         <outlet property="hourPickerView" destination="BSV-DT-1LC" id="N3r-np-bcq"/>
                         <outlet property="nameTextField" destination="UqF-7j-4IJ" id="O3W-di-lfH"/>
+                        <segue destination="Fie-sE-hPx" kind="unwind" identifier="goToPlayerGroupList" unwindAction="unwindFromAddPlayerGroup:" id="8PL-DN-iUX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1j-du-Zgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Fie-sE-hPx" userLabel="Exit" sceneMemberID="exit"/>
+                <tapGestureRecognizer id="min-TX-wcy"/>
             </objects>
             <point key="canvasLocation" x="3002" y="-329"/>
         </scene>

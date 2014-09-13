@@ -44,7 +44,7 @@ class PlayerGroupTableViewController: UITableViewController {
     }
 
     @IBAction func unwindFromAddPlayerGroup(segue: UIStoryboardSegue) {
-        
+        NSLog("Trying to do the segue")
     }
     
     // MARK: - Private methods
