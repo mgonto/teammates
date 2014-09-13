@@ -15,8 +15,7 @@ class PlayerGroupTableViewController: UITableViewController {
     let playerGroupRepository = Application.sharedInstance.playerGroupRepository
     var groups: [PlayerGroup] = []
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    func fetchAll() {
         playerGroupRepository.fetchAll({ [unowned self] (errorOpt, groupsOpt) in
             if let error = errorOpt {
                 NSLog("Error fetching groups \(error)")
@@ -25,6 +24,11 @@ class PlayerGroupTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         })
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.fetchAll()
     }
     
     // MARK: - Table view data source
@@ -45,6 +49,7 @@ class PlayerGroupTableViewController: UITableViewController {
 
     @IBAction func unwindFromAddPlayerGroup(segue: UIStoryboardSegue) {
         NSLog("Trying to do the segue")
+        fetchAll()
     }
     
     // MARK: - Private methods
