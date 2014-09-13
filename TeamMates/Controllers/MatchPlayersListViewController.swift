@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlayerGroupDetailController: UITableViewController {
+class MatchPlayersListViewController: UITableViewController {
 
     var playerGroup : PlayerGroup! {
         didSet {
@@ -28,17 +28,15 @@ class PlayerGroupDetailController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch (section) {
         case 0:
-            return 1
-        case 1:
             NSLog("players \(players.count)")
             return self.players.count
-        case 2:
+        case 1:
             NSLog("players \(players.count)")
             return self.nonPlayers.count
         default:
@@ -49,14 +47,6 @@ class PlayerGroupDetailController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         switch (indexPath.section) {
         case 0:
-            let cell = tableView.dequeueReusableCellWithIdentifier("groupHeaderCell", forIndexPath: indexPath) as UITableViewCell
-            
-            cell.textLabel?.text = playerGroup.name
-            cell.detailTextLabel?.text = formatPlayerGroupDate(playerGroup)
-            
-            return cell
-            
-        case 1:
             let cell = tableView.dequeueReusableCellWithIdentifier("playerDetailCell", forIndexPath: indexPath) as UITableViewCell
          
             let member = players[indexPath.row]
@@ -79,14 +69,9 @@ class PlayerGroupDetailController: UITableViewController {
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch (section) {
-        case 0: return nil
-        case 1: return "Players"
-        case 2: return "Not Going"
+        case 0: return "Players"
+        case 1: return "Not Going"
         default: return nil
         }
-    }
-    
-    func formatPlayerGroupDate(group: PlayerGroup) -> String {
-        return "\(group.dayOfWeek.description) \(group.hour):\(group.minutes)"
     }
 }
