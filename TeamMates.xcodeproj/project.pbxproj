@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		089EA4CE331242BBB00F2BCD /* libPods-TeamMates.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF925A1BC878413B8BB35E38 /* libPods-TeamMates.a */; };
+		9AAD58C419C4EA38007F1617 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD58C319C4EA38007F1617 /* LoginViewController.swift */; };
+		9AAD58C619C4EB1F007F1617 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD58C519C4EB1F007F1617 /* User.swift */; };
+		9AAD58C819C4ED98007F1617 /* UserParseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD58C719C4ED98007F1617 /* UserParseSerializer.swift */; };
+		9AAD58CA19C4F165007F1617 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAD58C919C4F165007F1617 /* MainTabBarViewController.swift */; };
 		9D1A038219C48EFB004098CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A038119C48EFB004098CA /* AppDelegate.swift */; };
 		9D1A038619C48EFB004098CA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A038519C48EFB004098CA /* SecondViewController.swift */; };
 		9D1A038919C48EFB004098CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D1A038719C48EFB004098CA /* Main.storyboard */; };
@@ -43,6 +47,10 @@
 
 /* Begin PBXFileReference section */
 		97C2ECE573BB496AA1CD23B0 /* Pods-TeamMates.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamMates.xcconfig"; path = "Pods/Pods-TeamMates.xcconfig"; sourceTree = "<group>"; };
+		9AAD58C319C4EA38007F1617 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = Controllers/LoginViewController.swift; sourceTree = "<group>"; };
+		9AAD58C519C4EB1F007F1617 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9AAD58C719C4ED98007F1617 /* UserParseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserParseSerializer.swift; sourceTree = "<group>"; };
+		9AAD58C919C4F165007F1617 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainTabBarViewController.swift; path = Controllers/MainTabBarViewController.swift; sourceTree = "<group>"; };
 		9D1A037C19C48EFB004098CA /* TeamMates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamMates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1A038019C48EFB004098CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1A038119C48EFB004098CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -164,6 +172,7 @@
 				9D1A03A319C491A9004098CA /* PlayerGroup.swift */,
 				9D1A03A819C495EA004098CA /* Player.swift */,
 				9DE836D719C4D14600536D15 /* Model.swift */,
+				9AAD58C519C4EB1F007F1617 /* User.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -173,6 +182,8 @@
 			children = (
 				9D1A03AF19C4995E004098CA /* PlayerGroupTableViewController.swift */,
 				9DE836CA19C4AEBA00536D15 /* AddPlayerGroupViewController.swift */,
+				9AAD58C319C4EA38007F1617 /* LoginViewController.swift */,
+				9AAD58C919C4F165007F1617 /* MainTabBarViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -192,6 +203,7 @@
 			children = (
 				9DE836D219C4CB3C00536D15 /* PlayerGroupParseSerializer.swift */,
 				9DE836D919C4D1EA00536D15 /* ParseSerializerHelper.swift */,
+				9AAD58C719C4ED98007F1617 /* UserParseSerializer.swift */,
 			);
 			name = Serializer;
 			sourceTree = "<group>";
@@ -356,9 +368,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AAD58C419C4EA38007F1617 /* LoginViewController.swift in Sources */,
 				9DE836D319C4CB3C00536D15 /* PlayerGroupParseSerializer.swift in Sources */,
 				9DE836C919C4A95E00536D15 /* Application.swift in Sources */,
+				9AAD58CA19C4F165007F1617 /* MainTabBarViewController.swift in Sources */,
 				9DE836D019C4C9FA00536D15 /* ParsePlayerGroupRepository.swift in Sources */,
+				9AAD58C819C4ED98007F1617 /* UserParseSerializer.swift in Sources */,
 				9D1A038619C48EFB004098CA /* SecondViewController.swift in Sources */,
 				9DE836DD19C4D6ED00536D15 /* SessionService.swift in Sources */,
 				9DE836DF19C4D7C600536D15 /* ParseSessionService.swift in Sources */,
@@ -373,6 +388,7 @@
 				9DE836D619C4CF1300536D15 /* ParseExtensions.swift in Sources */,
 				9D1A03A919C495EA004098CA /* Player.swift in Sources */,
 				9DE836DA19C4D1EA00536D15 /* ParseSerializerHelper.swift in Sources */,
+				9AAD58C619C4EB1F007F1617 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

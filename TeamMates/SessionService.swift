@@ -18,4 +18,8 @@ protocol SessionService {
     
     func isLoggedIn() -> Bool
     
+    func login(callback : (NSError?, User?) -> ())
+    
+    func currentUser() -> User?
+    
 }
