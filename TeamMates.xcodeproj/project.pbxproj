@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		01C4FD6119C4C9810036F113 /* PlayerGroupDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4FD6019C4C9810036F113 /* PlayerGroupDetailController.swift */; };
 		089EA4CE331242BBB00F2BCD /* libPods-TeamMates.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF925A1BC878413B8BB35E38 /* libPods-TeamMates.a */; };
 		9D1A038219C48EFB004098CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A038119C48EFB004098CA /* AppDelegate.swift */; };
 		9D1A038619C48EFB004098CA /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A038519C48EFB004098CA /* SecondViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		01C4FD6019C4C9810036F113 /* PlayerGroupDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerGroupDetailController.swift; path = Controllers/PlayerGroupDetailController.swift; sourceTree = "<group>"; };
 		97C2ECE573BB496AA1CD23B0 /* Pods-TeamMates.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamMates.xcconfig"; path = "Pods/Pods-TeamMates.xcconfig"; sourceTree = "<group>"; };
 		9D1A037C19C48EFB004098CA /* TeamMates.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamMates.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D1A038019C48EFB004098CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				9D1A03AF19C4995E004098CA /* PlayerGroupTableViewController.swift */,
 				9DE836CA19C4AEBA00536D15 /* AddPlayerGroupViewController.swift */,
+				01C4FD6019C4C9810036F113 /* PlayerGroupDetailController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				9DE836C119C4A39B00536D15 /* PlayerGroupRepository.swift in Sources */,
 				9D1A038219C48EFB004098CA /* AppDelegate.swift in Sources */,
 				9D1A03A419C491A9004098CA /* PlayerGroup.swift in Sources */,
+				01C4FD6119C4C9810036F113 /* PlayerGroupDetailController.swift in Sources */,
 				9DE836C519C4A52200536D15 /* InMemoryPlayerGroupRepository.swift in Sources */,
 				9D1A03A919C495EA004098CA /* Player.swift in Sources */,
 			);

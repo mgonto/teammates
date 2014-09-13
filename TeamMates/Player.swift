@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Player {
+class Player: Hashable {
     
     var firstName: String
     var lastName: String
@@ -19,5 +19,15 @@ class Player {
         self.lastName = lastName
         self.username = username
     }
-    
+
+    var hashValue: Int {
+        get {
+            return self.username.hashValue
+        }
+    }
+
+}
+
+func ==(lhs: Player, rhs: Player) -> Bool {
+    return lhs.username == rhs.username
 }

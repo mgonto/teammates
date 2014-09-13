@@ -58,4 +58,10 @@ class PlayerGroupTableViewController: UITableViewController {
         return "\(group.dayOfWeek.description) \(group.hour):\(group.minutes)"
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == "goToGroupDetail") {
+            let group: PlayerGroup = groups[self.tableView.indexPathForSelectedRow()!.row]
+            (segue.destinationViewController as PlayerGroupDetailController).playerGroup = group
+        }
+    }
 }

@@ -14,17 +14,43 @@ class PlayerGroup {
     var hour: Int
     var minutes: Int
     var name: String
-    var members: [Player]
+    
+    var members: [Player] {
+        get {
+            return Array(membersDict.keys)
+        }
+    }
+    
+    var membersDict: [Player: Bool]
     
     init(_ name: String, _ hour: Int, _ minutes: Int, _ dayOfWeek: DayOfWeek) {
         self.name = name
         self.hour = hour
         self.minutes = minutes
         self.dayOfWeek = dayOfWeek
-        self.members = []
+        self.membersDict = Dictionary()
     }
     
     func addMember(member: Player) {
-        members.append(member)
+        membersDict[member] = false
     }
+    
+    func setAsPlayer(member: Player) {
+        membersDict[member] = true
+    }
+
+    
+    func setAsNonPlayer(member: Player) {
+        membersDict[member] = false
+    }
+    
+    func getPlayers() -> [Player] {
+        return Array(membersDict.keys.filter({ (player) in return self.membersDict[player]! }))
+    }
+    
+    func getNonPlayers() -> [Player] {
+        return Array(membersDict.keys.filter({ (player) in return !(self.membersDict[player]!) }))
+    }
+    
+    
 }
