@@ -13,11 +13,13 @@ class Player: Model, Hashable {
     var firstName: String
     var lastName: String
     var username: String
+    var facebookId: String
     
-    init(firstName: String, lastName: String, username: String) {
+    init(firstName: String, lastName: String, username: String, facebookId : String) {
         self.firstName = firstName
         self.lastName = lastName
         self.username = username
+        self.facebookId = facebookId
     }
 
     var hashValue: Int {
