@@ -1,4 +1,5 @@
 PODS:
+  - Bolts (1.1.2)
   - CocoaLumberjack (2.0.0-beta):
     - CocoaLumberjack/CLI
     - CocoaLumberjack/Core
@@ -8,11 +9,20 @@ PODS:
   - CocoaLumberjack/Core (2.0.0-beta)
   - CocoaLumberjack/Extensions (2.0.0-beta):
     - CocoaLumberjack/Core
+  - Facebook-iOS-SDK (3.17.0):
+    - Bolts
+  - Parse-iOS-SDK (1.2.21):
+    - Bolts
+    - Facebook-iOS-SDK (~> 3.7)
 
 DEPENDENCIES:
   - CocoaLumberjack
+  - Parse-iOS-SDK (~> 1.2)
 
 SPEC CHECKSUMS:
+  Bolts: 2635e8698a630774689441047f3465d78c48d485
   CocoaLumberjack: aadc76d7bd6c839ca84b38ed50cbf89d7cf8c693
+  Facebook-iOS-SDK: f20274d809f112ba540842e2b6cbe50128d51b7b
+  Parse-iOS-SDK: 3781eeb56fa6b30d4feee97ee0d22595c07d6c70
 
 COCOAPODS: 0.33.1

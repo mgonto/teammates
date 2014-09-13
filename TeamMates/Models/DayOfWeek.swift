@@ -23,6 +23,12 @@ enum DayOfWeek: String {
         }
     }
     
+    var dayNumber: Int {
+        get {
+            return self.hashValue
+        }
+    }
+    
     private static let days = [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday]
     
     static func fromNumber(number: Int) -> DayOfWeek {

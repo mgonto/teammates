@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Player {
+class Player: Model {
     
     var firstName: String
     var lastName: String
