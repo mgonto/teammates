@@ -512,6 +512,7 @@
 			baseConfigurationReference = 97C2ECE573BB496AA1CD23B0 /* Pods-TeamMates.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TeamMates/Info.plist;
@@ -528,6 +529,7 @@
 			baseConfigurationReference = 97C2ECE573BB496AA1CD23B0 /* Pods-TeamMates.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = TeamMates/Info.plist;
