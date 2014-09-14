@@ -35,7 +35,7 @@ class ParseSessionService: SessionService {
         get {
             if _currentUser == nil {
                 let userDefaults = NSUserDefaults.standardUserDefaults()
-                let userDataOpt = userDefaults.objectForKey("currentUser") as? [String: AnyObject]
+                let userDataOpt = userDefaults.objectForKey("currentUser") as Dictionary<String, AnyObject>?
                 if let userData = userDataOpt {
                     _currentUser = User.fromDictionary(userData)
                 }
