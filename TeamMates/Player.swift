@@ -31,5 +31,5 @@ class Player: Model, Hashable {
 }
 
 func ==(lhs: Player, rhs: Player) -> Bool {
-    return lhs.username == rhs.username
+    return lhs.id == rhs.id
 }

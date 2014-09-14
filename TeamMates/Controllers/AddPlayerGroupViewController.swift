@@ -56,7 +56,8 @@ class AddPlayerGroupViewController: UIViewController, UIPickerViewDataSource, UI
         let components = NSCalendar.currentCalendar().components(NSCalendarUnit.HourCalendarUnit | NSCalendarUnit.MinuteCalendarUnit, fromDate: date)
         let dayNumber = self.dayOfWeekPickerView.selectedRowInComponent(0)
         let dayOfWeek = DayOfWeek.fromNumber(dayNumber)
-        var group = PlayerGroup(self.nameTextField.text, components.hour, components.minute, dayOfWeek)
+        let eventDate = EventDate(dayOfWeek, components.hour, components.minute)
+        var group = PlayerGroup(self.nameTextField.text, eventDate, 10, nil)
         playerGroupRepository.save(group, callback: { (errorOpt, groupOpt) -> () in
             if let error = errorOpt {
                 NSLog("There was an error creating a group \(error)")

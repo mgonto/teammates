@@ -19,33 +19,34 @@ class PlayerGroupViewController: UIViewController {
     @IBOutlet weak var noButton: UIButton!
     
     let sessionService = Application.sharedInstance.sessionService
+    let matchRepository = Application.sharedInstance.matchRepository
     
-    var playerGroup : PlayerGroup!
-    
-    var myPlayer : Player {
-        get {
-            return Player.fromUser(sessionService.currentUser!)
+    var playerGroup : PlayerGroup! {
+        didSet {
+            self.fetchCurrentMatch()
         }
     }
-    
-
-    
+    var matchOpt: Match?
+    var currentPlayer : Player!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        self.currentPlayer = Player.fromUser(sessionService.currentUser!)
     }
     
     func reloadUI() {
         nameLabel.text = playerGroup.name
-        dateLabel.text = playerGroup.getFormattedDate()
-        confirmedPlayersLabel.text = "\(playerGroup.getPlayers().count)"
-        requiredPlayersLabel.text = "\(playerGroup.requiredPlayers)"
-        let userPlays = playerGroup.plays(myPlayer)
-        NSLog("%@", userPlays)
-        yesButton.enabled = !userPlays
-        noButton.enabled = userPlays
-        
+        if let match = self.matchOpt {
+            dateLabel.text = self.formatDate(match.date)
+            confirmedPlayersLabel.text = "\(match.players)"
+            requiredPlayersLabel.text = "\(match.requiredPlayersAmount)"
+            let userPlays = match.plays(currentPlayer)
+            yesButton.enabled = !userPlays
+            noButton.enabled = userPlays
+        } else {
+            yesButton.enabled = false
+            noButton.enabled = false
+        }
     }
 
     override func viewWillAppear(animated: Bool) {
@@ -59,13 +60,13 @@ class PlayerGroupViewController: UIViewController {
     
     
     @IBAction func participateInGame(sender: AnyObject) {
-        self.playerGroup.setAsPlayer(myPlayer)
+        self.matchOpt?.addPlayer(self.currentPlayer)
         self.reloadUI()
     }
     
 
     @IBAction func dontParticipateInGame(sender: AnyObject) {
-        self.playerGroup.setAsNonPlayer(myPlayer)
+        self.matchOpt?.removePlayer(self.currentPlayer)
         self.reloadUI()
     }
 
@@ -73,8 +74,30 @@ class PlayerGroupViewController: UIViewController {
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "goToMatchPlayersList") {
-            (segue.destinationViewController as MatchPlayersListViewController).playerGroup = playerGroup
+            (segue.destinationViewController as MatchPlayersListViewController).setMatch(self.matchOpt!, forGroup: self.playerGroup)
         }
+    }
+    
+    // MARK: - Private methods
+    
+    func fetchCurrentMatch() {
+        if let currentMatchId = self.playerGroup.currentMatchIdOpt {
+            self.matchRepository.fetch(currentMatchId, callback: { (errorOpt, matchOpt) -> () in
+                if let error = errorOpt {
+                    NSLog("Current match could not be fetched \(error)")
+                } else {
+                    self.matchOpt = matchOpt
+                    self.reloadUI()
+                }
+            })
+        }
+    }
+    
+    func formatDate(date: NSDate) -> String {
+        let formatter = NSDateFormatter()
+        formatter.dateStyle = NSDateFormatterStyle.MediumStyle
+        formatter.timeStyle = NSDateFormatterStyle.ShortStyle
+        return formatter.stringFromDate(date)
     }
 
 }

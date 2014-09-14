@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Model {
+class Model: Equatable {
 
     var id: String?
     var createdAt: NSDate?
@@ -18,4 +18,8 @@ class Model {
         
     }
     
+}
+
+func ==(lhs: Model, rhs: Model) -> Bool {
+    return lhs.id == rhs.id
 }

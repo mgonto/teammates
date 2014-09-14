@@ -18,4 +18,8 @@ extension PFObject {
         return self[key] as Int?
     }
     
+    func getDate(key: String) -> NSDate? {
+        return self[key] as NSDate?
+    }
+    
 }

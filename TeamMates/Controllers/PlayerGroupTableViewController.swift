@@ -42,7 +42,7 @@ class PlayerGroupTableViewController: UITableViewController {
 
         let group = groups[indexPath.row]
         cell.textLabel?.text = group.name
-        cell.detailTextLabel?.text = formatPlayerGroupDate(group)
+        cell.detailTextLabel?.text = group.date.formmatedDate()
 
         return cell
     }
@@ -53,10 +53,6 @@ class PlayerGroupTableViewController: UITableViewController {
     }
     
     // MARK: - Private methods
-    
-    func formatPlayerGroupDate(group: PlayerGroup) -> String {
-        return "\(group.dayOfWeek.description) \(group.hour):\(group.minutes)"
-    }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "goToGroupDetail") {

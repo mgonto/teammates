@@ -10,61 +10,42 @@ import Foundation
 
 class PlayerGroup: Model {
 
-    var dayOfWeek: DayOfWeek
-    var hour: Int
-    var minutes: Int
-    var name: String
-    var requiredPlayers : Int = 10
+    private var _members: [Player] = []
     
-    var members: [Player] {
+    let date: EventDate
+    let name: String
+    let currentMatchIdOpt: String?
+    var requiredPlayersAmount : Int = 10
+    var members: Int {
         get {
-            return Array(membersDict.keys)
+            return _members.count
         }
     }
     
-    var membersDict: [Player: Bool]
-    
-    init(_ name: String, _ hour: Int, _ minutes: Int, _ dayOfWeek: DayOfWeek) {
+    init(_ name: String, _ date: EventDate, _ requiredPlayersAmount: Int, _ currentMatchIdOpt: String?) {
         self.name = name
-        self.hour = hour
-        self.minutes = minutes
-        self.dayOfWeek = dayOfWeek
-        self.membersDict = Dictionary()
-        
-        super.init()
+        self.date = date
+        self.requiredPlayersAmount = requiredPlayersAmount
+        self.currentMatchIdOpt = currentMatchIdOpt
     }
     
     func addMember(member: Player) {
-        membersDict[member] = false
+        _members.append(member)
     }
     
-    func setAsPlayer(member: Player) {
-        membersDict[member] = true
-    }
-    
-    func plays(member: Player) -> Bool {
-        var contains = false
-        if let plays = membersDict[member] {
-            contains = plays
+    func removeMember(member: Player) {
+        for (index, element) in enumerate(_members) {
+            if (element == member) {
+                _members.removeAtIndex(index)
+            }
         }
-        return contains
-    }
-
-    
-    func setAsNonPlayer(member: Player) {
-        membersDict[member] = false
     }
     
-    func getPlayers() -> [Player] {
-        return Array(membersDict.keys.filter({ (player) in return self.membersDict[player]! }))
-    }
-    
-    func getNonPlayers() -> [Player] {
-        return Array(membersDict.keys.filter({ (player) in return !(self.membersDict[player]!) }))
-    }
-    
-    func getFormattedDate() -> String {
-        return "\(self.dayOfWeek.description) \(self.hour):\(self.minutes)"
+    func getAbsentPlayers(match: Match) -> [Player] {
+        let players = match.players
+        return _members.filter { (player) -> Bool in
+            !contains(players, player)
+        }
     }
     
 }

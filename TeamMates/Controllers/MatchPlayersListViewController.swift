@@ -10,21 +10,18 @@ import UIKit
 
 class MatchPlayersListViewController: UITableViewController {
 
-    var playerGroup : PlayerGroup! {
-        didSet {
-            self.nonPlayers = playerGroup.getNonPlayers()
-            self.players = playerGroup.getPlayers()
-        }
+    private var _group: PlayerGroup!
+    private var _match: Match!
+    private var _attendees: [Player]!
+    private var _nonAttendees: [Player]!
+    
+    func setMatch(match: Match, forGroup group: PlayerGroup) {
+        _group = group
+        _match = match
+        _attendees = match.players
+        _nonAttendees = group.getAbsentPlayers(_match)
     }
     
-    var players : [Player]!
-    var nonPlayers : [Player]!
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -34,11 +31,9 @@ class MatchPlayersListViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch (section) {
         case 0:
-            NSLog("players \(players.count)")
-            return self.players.count
+            return _attendees.count
         case 1:
-            NSLog("players \(players.count)")
-            return self.nonPlayers.count
+            return _nonAttendees.count
         default:
             return 0
         }
@@ -49,17 +44,14 @@ class MatchPlayersListViewController: UITableViewController {
         case 0:
             let cell = tableView.dequeueReusableCellWithIdentifier("playerDetailCell", forIndexPath: indexPath) as UITableViewCell
          
-            let member = players[indexPath.row]
-            NSLog("member player \(member.firstName)")
+            let member = _attendees[indexPath.row]
             cell.textLabel?.text = "\(member.firstName) \(member.lastName)"
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark
             return cell
             
         default: // case 3
             let cell = tableView.dequeueReusableCellWithIdentifier("playerDetailCell", forIndexPath: indexPath) as UITableViewCell
-            
-            let member = nonPlayers[indexPath.row]
-            NSLog("member NONplayer \(member.firstName)")
+            let member = _nonAttendees[indexPath.row]
             cell.textLabel?.text = "\(member.firstName) \(member.lastName)"
 
             

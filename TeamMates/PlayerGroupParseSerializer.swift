@@ -10,26 +10,25 @@ import Foundation
 
 extension PlayerGroup {
     
+    class func tableName() -> String {
+        return "PlayerGroup"
+    }
+    
     class func fromParseObject(object: PFObject) -> PlayerGroup {
         let name = object.getString("name")!
-        let hour = object.getInt("hour")!
-        let minutes = object.getInt("minutes")!
-        let dayOfWeek = DayOfWeek.fromNumber(object.getInt("day_of_week")!)
-        let group = PlayerGroup(name, hour, minutes, dayOfWeek)
+        let date = EventDate.fromParseObject(object)
+        let requiredPlayersAmount = object.getInt("required_players_amount")!
+        let currentMatchId = object.getString("current_match_id")!
+        let group = PlayerGroup(name, date, requiredPlayersAmount, currentMatchId)
         return ParseSerializerHelper.setBaseFields(group, object)
     }
     
     func toParseObject() -> PFObject {
         let object = PFObject(className: PlayerGroup.tableName())
+        self.date.toParseObject(object)
         object["name"] = self.name
-        object["day_of_week"] = self.dayOfWeek.dayNumber
-        object["hour"] = self.hour
-        object["minutes"] = self.minutes
+        object["required_players"] = self.requiredPlayersAmount
         return object
-    }
-    
-    class func tableName() -> String {
-        return "PlayerGroup"
     }
     
 }

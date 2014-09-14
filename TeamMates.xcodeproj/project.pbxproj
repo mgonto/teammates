@@ -24,8 +24,12 @@
 		9D1A03A619C4927A004098CA /* DayOfWeek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A03A519C4927A004098CA /* DayOfWeek.swift */; };
 		9D1A03A919C495EA004098CA /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A03A819C495EA004098CA /* Player.swift */; };
 		9D1A03B019C4995E004098CA /* PlayerGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1A03AF19C4995E004098CA /* PlayerGroupTableViewController.swift */; };
+		9D26B66619C62EEC003279FB /* EventDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D26B66519C62EEC003279FB /* EventDate.swift */; };
+		9D26B66819C63C82003279FB /* EventDateParseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D26B66719C63C82003279FB /* EventDateParseSerializer.swift */; };
+		9D26B66A19C6421B003279FB /* MatchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D26B66919C6421B003279FB /* MatchRepository.swift */; };
+		9D26B66C19C64375003279FB /* ParseMatchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D26B66B19C64375003279FB /* ParseMatchRepository.swift */; };
+		9D26B66E19C64537003279FB /* MatchSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D26B66D19C64537003279FB /* MatchSerializer.swift */; };
 		9DE836C119C4A39B00536D15 /* PlayerGroupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836C019C4A39B00536D15 /* PlayerGroupRepository.swift */; };
-		9DE836C519C4A52200536D15 /* InMemoryPlayerGroupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836C419C4A52200536D15 /* InMemoryPlayerGroupRepository.swift */; };
 		9DE836C919C4A95E00536D15 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836C819C4A95E00536D15 /* Application.swift */; };
 		9DE836CB19C4AEBA00536D15 /* AddPlayerGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836CA19C4AEBA00536D15 /* AddPlayerGroupViewController.swift */; };
 		9DE836D019C4C9FA00536D15 /* ParsePlayerGroupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836CF19C4C9FA00536D15 /* ParsePlayerGroupRepository.swift */; };
@@ -35,6 +39,7 @@
 		9DE836DA19C4D1EA00536D15 /* ParseSerializerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836D919C4D1EA00536D15 /* ParseSerializerHelper.swift */; };
 		9DE836DD19C4D6ED00536D15 /* SessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836DC19C4D6ED00536D15 /* SessionService.swift */; };
 		9DE836DF19C4D7C600536D15 /* ParseSessionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836DE19C4D7C600536D15 /* ParseSessionService.swift */; };
+		9DE836E119C5134300536D15 /* Match.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836E019C5134300536D15 /* Match.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,8 +74,12 @@
 		9D1A03A519C4927A004098CA /* DayOfWeek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DayOfWeek.swift; path = Models/DayOfWeek.swift; sourceTree = "<group>"; };
 		9D1A03A819C495EA004098CA /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		9D1A03AF19C4995E004098CA /* PlayerGroupTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerGroupTableViewController.swift; path = Controllers/PlayerGroupTableViewController.swift; sourceTree = "<group>"; };
+		9D26B66519C62EEC003279FB /* EventDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDate.swift; sourceTree = "<group>"; };
+		9D26B66719C63C82003279FB /* EventDateParseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDateParseSerializer.swift; sourceTree = "<group>"; };
+		9D26B66919C6421B003279FB /* MatchRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchRepository.swift; sourceTree = "<group>"; };
+		9D26B66B19C64375003279FB /* ParseMatchRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseMatchRepository.swift; sourceTree = "<group>"; };
+		9D26B66D19C64537003279FB /* MatchSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MatchSerializer.swift; sourceTree = "<group>"; };
 		9DE836C019C4A39B00536D15 /* PlayerGroupRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerGroupRepository.swift; sourceTree = "<group>"; };
-		9DE836C419C4A52200536D15 /* InMemoryPlayerGroupRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMemoryPlayerGroupRepository.swift; sourceTree = "<group>"; };
 		9DE836C819C4A95E00536D15 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
 		9DE836CA19C4AEBA00536D15 /* AddPlayerGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPlayerGroupViewController.swift; path = Controllers/AddPlayerGroupViewController.swift; sourceTree = "<group>"; };
 		9DE836CC19C4C93E00536D15 /* TeamMates-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TeamMates-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -81,6 +90,7 @@
 		9DE836D919C4D1EA00536D15 /* ParseSerializerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSerializerHelper.swift; sourceTree = "<group>"; };
 		9DE836DC19C4D6ED00536D15 /* SessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionService.swift; sourceTree = "<group>"; };
 		9DE836DE19C4D7C600536D15 /* ParseSessionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseSessionService.swift; sourceTree = "<group>"; };
+		9DE836E019C5134300536D15 /* Match.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Match.swift; sourceTree = "<group>"; };
 		EF925A1BC878413B8BB35E38 /* libPods-TeamMates.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TeamMates.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -176,6 +186,8 @@
 				9D1A03A819C495EA004098CA /* Player.swift */,
 				9DE836D719C4D14600536D15 /* Model.swift */,
 				9AAD58C519C4EB1F007F1617 /* User.swift */,
+				9DE836E019C5134300536D15 /* Match.swift */,
+				9D26B66519C62EEC003279FB /* EventDate.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -197,8 +209,9 @@
 			isa = PBXGroup;
 			children = (
 				9DE836C019C4A39B00536D15 /* PlayerGroupRepository.swift */,
-				9DE836C419C4A52200536D15 /* InMemoryPlayerGroupRepository.swift */,
 				9DE836CF19C4C9FA00536D15 /* ParsePlayerGroupRepository.swift */,
+				9D26B66919C6421B003279FB /* MatchRepository.swift */,
+				9D26B66B19C64375003279FB /* ParseMatchRepository.swift */,
 			);
 			name = Repositories;
 			sourceTree = "<group>";
@@ -210,6 +223,8 @@
 				9DE836D919C4D1EA00536D15 /* ParseSerializerHelper.swift */,
 				9AAD58C719C4ED98007F1617 /* UserSerializer.swift */,
 				9AADB7B619C5140100CD6C2F /* PlayerSerializer.swift */,
+				9D26B66719C63C82003279FB /* EventDateParseSerializer.swift */,
+				9D26B66D19C64537003279FB /* MatchSerializer.swift */,
 			);
 			name = Serializer;
 			sourceTree = "<group>";
@@ -379,25 +394,30 @@
 				01C4FD6319C4EB0D0036F113 /* PlayerGroupViewController.swift in Sources */,
 				9DE836D319C4CB3C00536D15 /* PlayerGroupParseSerializer.swift in Sources */,
 				9DE836C919C4A95E00536D15 /* Application.swift in Sources */,
+				9D26B66819C63C82003279FB /* EventDateParseSerializer.swift in Sources */,
 				9AAD58CA19C4F165007F1617 /* MainTabBarViewController.swift in Sources */,
 				9DE836D019C4C9FA00536D15 /* ParsePlayerGroupRepository.swift in Sources */,
 				9AAD58C819C4ED98007F1617 /* UserSerializer.swift in Sources */,
+				9DE836E119C5134300536D15 /* Match.swift in Sources */,
 				9DE836DD19C4D6ED00536D15 /* SessionService.swift in Sources */,
 				9DE836DF19C4D7C600536D15 /* ParseSessionService.swift in Sources */,
 				9D1A03A619C4927A004098CA /* DayOfWeek.swift in Sources */,
 				9AADB7B719C5140100CD6C2F /* PlayerSerializer.swift in Sources */,
+				9D26B66C19C64375003279FB /* ParseMatchRepository.swift in Sources */,
 				9DE836CB19C4AEBA00536D15 /* AddPlayerGroupViewController.swift in Sources */,
 				9D1A03B019C4995E004098CA /* PlayerGroupTableViewController.swift in Sources */,
+				9D26B66E19C64537003279FB /* MatchSerializer.swift in Sources */,
 				9DE836D819C4D14600536D15 /* Model.swift in Sources */,
 				9DE836C119C4A39B00536D15 /* PlayerGroupRepository.swift in Sources */,
 				9D1A038219C48EFB004098CA /* AppDelegate.swift in Sources */,
+				9D26B66A19C6421B003279FB /* MatchRepository.swift in Sources */,
 				9D1A03A419C491A9004098CA /* PlayerGroup.swift in Sources */,
 				01C4FD6119C4C9810036F113 /* MatchPlayersListViewController.swift in Sources */,
-				9DE836C519C4A52200536D15 /* InMemoryPlayerGroupRepository.swift in Sources */,
 				9DE836D619C4CF1300536D15 /* ParseExtensions.swift in Sources */,
 				9D1A03A919C495EA004098CA /* Player.swift in Sources */,
 				9DE836DA19C4D1EA00536D15 /* ParseSerializerHelper.swift in Sources */,
 				9AAD58C619C4EB1F007F1617 /* User.swift in Sources */,
+				9D26B66619C62EEC003279FB /* EventDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
