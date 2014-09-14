@@ -8,13 +8,68 @@
 
 import UIKit
 
+protocol PlayerGroupSettingsDelegate {
+    func onCancel(vc: PlayerGroupSettingsViewController)
+    func onSave(vc: PlayerGroupSettingsViewController, name: String, hours: Int, minutes: Int, dayOfWeek: DayOfWeek)
+    func onLoad(vc: PlayerGroupSettingsViewController)
+}
+
+
 class PlayerGroupSettingsViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    class AddGroupDelegate : PlayerGroupSettingsDelegate {
+        func onCancel(vc: PlayerGroupSettingsViewController) {
+            vc.performSegueWithIdentifier("goToPlayerGroupList", sender: self)
+        }
+        
+        func onSave(vc: PlayerGroupSettingsViewController, name: String, hours: Int, minutes: Int, dayOfWeek: DayOfWeek) {
+            var group = PlayerGroup(name, hours, minutes, dayOfWeek)
+            vc.playerGroupRepository.save(group, callback: { (errorOpt, groupOpt) -> () in
+                if let error = errorOpt {
+                    NSLog("There was an error creating a group \(error)")
+                } else {
+                    vc.performSegueWithIdentifier("goToPlayerGroupList", sender: self)
+                }
+                
+            })
+            
+        }
+        
+        func onLoad(vc: PlayerGroupSettingsViewController) {
+            return
+        }
+    }
+    
+    class EditGroupDelegate : PlayerGroupSettingsDelegate {
+        
+        var playerGroup : PlayerGroup
+        
+        init(playerGroup : PlayerGroup) {
+            self.playerGroup = playerGroup
+        }
+        
+        func onCancel(vc: PlayerGroupSettingsViewController) {
+            vc.performSegueWithIdentifier("goToPlayerGroupDashboard", sender: self)
+        }
+        
+        func onSave(vc: PlayerGroupSettingsViewController, name: String, hours: Int, minutes: Int, dayOfWeek: DayOfWeek) {
+            vc.performSegueWithIdentifier("goToPlayerGroupDashboard", sender: self)
+            return
+        }
+        
+        func onLoad(vc: PlayerGroupSettingsViewController) {
+            vc.nameTextField.text = playerGroup.name
+            vc.dayOfWeekPickerView.selectRow(playerGroup.dayOfWeek.dayNumber, inComponent: 0, animated: false)
+            
+            vc.hourPickerView.setDate(DateHelper.getDateFor(playerGroup.hour, minutes: playerGroup.minutes), animated: false)
+        }
+    }
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var dayOfWeekPickerView: UIPickerView!
     @IBOutlet weak var hourPickerView: UIDatePicker!
     
-    var playerGroup : PlayerGroup?
+    var delegate : PlayerGroupSettingsDelegate!
     let playerGroupRepository = Application.sharedInstance.playerGroupRepository
     
     override func viewDidLoad() {
@@ -24,22 +79,7 @@ class PlayerGroupSettingsViewController: UIViewController, UIPickerViewDataSourc
     }
 
     override func viewWillAppear(animated: Bool) {
-        setFieldInitialValues()
-    }
-
-    func setFieldInitialValues() {
-        if let group = playerGroup {
-            nameTextField.text = group.name
-            dayOfWeekPickerView.selectRow(group.dayOfWeek.dayNumber, inComponent: 0, animated: false)
-            
-            hourPickerView.setDate(DateHelper.getDateFor(group.hour, minutes: group.minutes), animated: false)
-        }
-        
-    }
-    
-    func setInEditMode(playerGroup : PlayerGroup) {
-        NSLog("Estoy en edit mode")
-        self.playerGroup = playerGroup
+        delegate.onLoad(self)
     }
     
     @IBAction func enterPressOnNameTextField(sender: AnyObject) {
@@ -66,47 +106,13 @@ class PlayerGroupSettingsViewController: UIViewController, UIPickerViewDataSourc
         self.nameTextField.resignFirstResponder()
     }
     
-    func isInEditMode() -> Bool {
-        if let group = playerGroup {
-            NSLog("ES TRUE")
-            return true
-        } else {
-            NSLog("ES FALSE")
-            return false
-        }
-    }
-    
-    @IBAction func goBack(sender: AnyObject) {
-        if (self.isInEditMode()) {
-            self.performSegueWithIdentifier("goToPlayerGroupDashboard", sender: self)
-        } else {
-            self.performSegueWithIdentifier("goToPlayerGroupList", sender: self)
-        }
-    }
-    
     
     @IBAction func createGroup(sender: AnyObject) {
         let ( hours, minutes ) = DateHelper.hourAndMinutesFrom(self.hourPickerView.date)
         let dayNumber = self.dayOfWeekPickerView.selectedRowInComponent(0)
         let dayOfWeek = DayOfWeek.fromNumber(dayNumber)
         
-        if let group = playerGroup {
-            playerGroup = nil // cancel edit mode
-
-            self.performSegueWithIdentifier("goToPlayerGroupDashboard", sender: self)
-        } else {
-            var group = PlayerGroup(self.nameTextField.text, hours, minutes, dayOfWeek)
-            playerGroupRepository.save(group, callback: { (errorOpt, groupOpt) -> () in
-                if let error = errorOpt {
-                    NSLog("There was an error creating a group \(error)")
-                } else {
-                    self.performSegueWithIdentifier("goToPlayerGroupList", sender: self)
-                }
-                
-            })
-            
-        }
-        
+        delegate.onSave(self, name: self.nameTextField.text, hours: hours, minutes: minutes, dayOfWeek: dayOfWeek)
     }
     
     /*
@@ -120,3 +126,7 @@ class PlayerGroupSettingsViewController: UIViewController, UIPickerViewDataSourc
     */
 
 }
+
+
+
+

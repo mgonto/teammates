@@ -47,6 +47,7 @@ class PlayerGroupTableViewController: UITableViewController {
         return cell
     }
 
+    
     @IBAction func unwindFromAddPlayerGroup(segue: UIStoryboardSegue) {
         NSLog("Trying to do the segue")
         fetchAll()
@@ -63,6 +64,11 @@ class PlayerGroupTableViewController: UITableViewController {
             let group: PlayerGroup = groups[self.tableView.indexPathForSelectedRow()!.row]
             NSLog("\(segue.destinationViewController)")
             (segue.destinationViewController as PlayerGroupViewController).playerGroup = group
+        }
+        
+        if (segue.identifier == "goToAddPlayerGroup") {
+            let vc = (segue.destinationViewController as UINavigationController).visibleViewController as PlayerGroupSettingsViewController
+            vc.delegate = PlayerGroupSettingsViewController.AddGroupDelegate()
         }
     }
 }

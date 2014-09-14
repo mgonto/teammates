@@ -46,8 +46,8 @@ class PlayerGroupViewController: UIViewController {
             case "goToMatchPlayersList":
                 (segue.destinationViewController as MatchPlayersListViewController).playerGroup = playerGroup
             case "goToEditPlayerGroup":
-                let navigationVC = (segue.destinationViewController as UINavigationController)
-                (navigationVC.visibleViewController as PlayerGroupSettingsViewController).setInEditMode(playerGroup)
+                let vc = (segue.destinationViewController as UINavigationController).visibleViewController as PlayerGroupSettingsViewController
+                vc.delegate = PlayerGroupSettingsViewController.EditGroupDelegate(playerGroup: playerGroup)
             default:
                 return
         }
