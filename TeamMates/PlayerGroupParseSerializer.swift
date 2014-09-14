@@ -27,7 +27,7 @@ extension PlayerGroup {
         let object = PFObject(className: PlayerGroup.tableName())
         self.date.toParseObject(object)
         object["name"] = self.name
-        object["required_players"] = self.requiredPlayersAmount
+        object["required_players_amount"] = self.requiredPlayersAmount
         return object
     }
     

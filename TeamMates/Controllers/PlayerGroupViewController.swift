@@ -38,7 +38,7 @@ class PlayerGroupViewController: UIViewController {
         nameLabel.text = playerGroup.name
         if let match = self.matchOpt {
             dateLabel.text = self.formatDate(match.date)
-            confirmedPlayersLabel.text = "\(match.players)"
+            confirmedPlayersLabel.text = "\(match.players.count)"
             requiredPlayersLabel.text = "\(match.requiredPlayersAmount)"
             let userPlays = match.plays(currentPlayer)
             yesButton.enabled = !userPlays
