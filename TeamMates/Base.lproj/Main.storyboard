@@ -250,7 +250,9 @@
                         <outlet property="dateLabel" destination="fGV-Ae-1Ue" id="Gmd-Dq-qB5"/>
                         <outlet property="daysLeftLabel" destination="1Yr-La-Vga" id="Lca-Kb-SLi"/>
                         <outlet property="nameLabel" destination="mbA-CH-f4e" id="c9w-RB-HTI"/>
+                        <outlet property="noButton" destination="M2J-kV-0j8" id="lLs-gt-Uu2"/>
                         <outlet property="requiredPlayersLabel" destination="F94-1o-eAf" id="LUm-mT-ust"/>
+                        <outlet property="yesButton" destination="q4c-Zy-y1a" id="cCK-mf-E9c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cp-pz-qeS" userLabel="First Responder" sceneMemberID="firstResponder"/>

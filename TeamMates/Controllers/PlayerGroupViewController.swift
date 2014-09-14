@@ -15,25 +15,41 @@ class PlayerGroupViewController: UIViewController {
     @IBOutlet weak var daysLeftLabel: UILabel!
     @IBOutlet weak var confirmedPlayersLabel: UILabel!
     @IBOutlet weak var requiredPlayersLabel: UILabel!
-    
-    var playerGroup : PlayerGroup!
+    @IBOutlet weak var yesButton: UIButton!
+    @IBOutlet weak var noButton: UIButton!
     
     let sessionService = Application.sharedInstance.sessionService
     
+    var playerGroup : PlayerGroup!
+    
+    var myPlayer : Player {
+        get {
+            return Player.fromUser(sessionService.currentUser!)
+        }
+    }
+    
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
-
-    override func viewWillAppear(animated: Bool) {
+    
+    func reloadUI() {
         nameLabel.text = playerGroup.name
         dateLabel.text = playerGroup.getFormattedDate()
         confirmedPlayersLabel.text = "\(playerGroup.getPlayers().count)"
         requiredPlayersLabel.text = "\(playerGroup.requiredPlayers)"
+        let userPlays = playerGroup.plays(myPlayer)
+        NSLog("%@", userPlays)
+        yesButton.enabled = !userPlays
+        noButton.enabled = userPlays
         
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        self.reloadUI()
         
     }
     override func didReceiveMemoryWarning() {
@@ -43,12 +59,14 @@ class PlayerGroupViewController: UIViewController {
     
     
     @IBAction func participateInGame(sender: AnyObject) {
-        self.playerGroup.setAsPlayer(Player.fromUser(sessionService.currentUser!))
+        self.playerGroup.setAsPlayer(myPlayer)
+        self.reloadUI()
     }
     
 
     @IBAction func dontParticipateInGame(sender: AnyObject) {
-        self.playerGroup.setAsNonPlayer(Player.fromUser(sessionService.currentUser!))
+        self.playerGroup.setAsNonPlayer(myPlayer)
+        self.reloadUI()
     }
 
     // MARK: - Navigation

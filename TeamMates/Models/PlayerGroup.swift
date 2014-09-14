@@ -41,6 +41,14 @@ class PlayerGroup: Model {
     func setAsPlayer(member: Player) {
         membersDict[member] = true
     }
+    
+    func plays(member: Player) -> Bool {
+        var contains = false
+        if let plays = membersDict[member] {
+            contains = plays
+        }
+        return contains
+    }
 
     
     func setAsNonPlayer(member: Player) {
