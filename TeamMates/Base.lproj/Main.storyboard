@@ -108,49 +108,49 @@
                         </userGuides>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Group Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mbA-CH-f4e">
-                                <rect key="frame" x="208" y="72" width="184" height="37"/>
+                                <rect key="frame" x="208" y="72" width="183.5" height="37"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-MediumItalic" family="Helvetica Neue" pointSize="31"/>
                                 <color key="textColor" red="0.0" green="0.50196081400000003" blue="0.25098040700000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Next Game is" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYe-9m-brZ">
-                                <rect key="frame" x="40" y="202" width="104" height="21"/>
+                                <rect key="frame" x="40" y="202" width="104" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday 20:30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGV-Ae-1Ue">
-                                <rect key="frame" x="239" y="117" width="123" height="23"/>
+                                <rect key="frame" x="239" y="117" width="122.5" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntJ-D0-mKP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="3" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ntJ-D0-mKP">
                                 <rect key="frame" x="484" y="235" width="13" height="27"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Players" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U7g-3m-W5j">
-                                <rect key="frame" x="40" y="238" width="57" height="21"/>
+                                <rect key="frame" x="40" y="237" width="56.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oz1-TY-1jU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="/" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oz1-TY-1jU">
                                 <rect key="frame" x="502" y="228" width="12" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="35"/>
                                 <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F94-1o-eAf">
-                                <rect key="frame" x="519" y="235" width="25" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F94-1o-eAf">
+                                <rect key="frame" x="519" y="234" width="24.5" height="26.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7c-ei-hm3">
-                                <rect key="frame" x="112" y="234" width="31" height="30"/>
+                                <rect key="frame" x="111" y="233" width="31" height="30"/>
                                 <state key="normal" title="view">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -185,13 +185,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sJD-DB-fay">
-                                <rect key="frame" x="416" y="76" width="33" height="30"/>
-                                <state key="normal" title="EDIT">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpC-Ra-1Ta">
+                                <rect key="frame" x="210.5" y="398" width="179" height="30"/>
+                                <state key="normal" title="Invite friends to the match">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4tt-3D-ngr" kind="presentation" identifier="goToEditGroup" id="UBF-US-gXS"/>
+                                    <segue destination="Wj6-hI-k5y" kind="presentation" identifier="showFriends" modalPresentationStyle="currentContext" id="J1k-YS-MYD"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -199,18 +199,17 @@
                         <constraints>
                             <constraint firstItem="ntJ-D0-mKP" firstAttribute="centerY" secondItem="oz1-TY-1jU" secondAttribute="centerY" id="2to-2y-vRz"/>
                             <constraint firstItem="ntJ-D0-mKP" firstAttribute="leading" secondItem="U7g-3m-W5j" secondAttribute="trailing" constant="133" id="6Bg-wk-gYf"/>
-                            <constraint firstItem="sJD-DB-fay" firstAttribute="leading" secondItem="mbA-CH-f4e" secondAttribute="trailing" constant="24" id="6Ve-Ie-CaL"/>
                             <constraint firstItem="KYe-9m-brZ" firstAttribute="leading" secondItem="Vua-6V-eev" secondAttribute="leadingMargin" constant="24" id="97s-iw-4eg"/>
                             <constraint firstAttribute="centerX" secondItem="mbA-CH-f4e" secondAttribute="centerX" id="At2-nf-DZf"/>
                             <constraint firstItem="F94-1o-eAf" firstAttribute="leading" secondItem="oz1-TY-1jU" secondAttribute="trailing" constant="5" id="Cf6-OH-Pjz"/>
                             <constraint firstItem="j7c-ei-hm3" firstAttribute="centerY" secondItem="ntJ-D0-mKP" secondAttribute="centerY" id="Dwb-Za-OmB"/>
-                            <constraint firstItem="mbA-CH-f4e" firstAttribute="centerY" secondItem="sJD-DB-fay" secondAttribute="centerY" id="El0-Rr-nhV"/>
                             <constraint firstItem="zg2-dc-AAQ" firstAttribute="top" secondItem="M2J-kV-0j8" secondAttribute="bottom" constant="8" id="EoV-Ez-4bT"/>
                             <constraint firstItem="U7g-3m-W5j" firstAttribute="leading" secondItem="KYe-9m-brZ" secondAttribute="leading" id="Jcu-vQ-LhY"/>
                             <constraint firstItem="oz1-TY-1jU" firstAttribute="leading" secondItem="ntJ-D0-mKP" secondAttribute="trailing" constant="-2" id="KQK-5v-Vca"/>
                             <constraint firstItem="ntJ-D0-mKP" firstAttribute="centerY" secondItem="F94-1o-eAf" secondAttribute="centerY" id="OQw-8r-imf"/>
                             <constraint firstItem="mbA-CH-f4e" firstAttribute="centerX" secondItem="fGV-Ae-1Ue" secondAttribute="centerX" id="PIe-jy-2CR"/>
                             <constraint firstAttribute="trailingMargin" secondItem="M2J-kV-0j8" secondAttribute="trailing" constant="45" id="PT1-tX-lyz"/>
+                            <constraint firstItem="qpC-Ra-1Ta" firstAttribute="top" secondItem="fGV-Ae-1Ue" secondAttribute="bottom" constant="258" id="Qk9-gR-58c"/>
                             <constraint firstAttribute="trailingMargin" secondItem="F94-1o-eAf" secondAttribute="trailing" constant="40" id="Tul-wg-Duq"/>
                             <constraint firstAttribute="centerX" secondItem="q4c-Zy-y1a" secondAttribute="centerX" constant="221.5" id="U6p-c1-I1t"/>
                             <constraint firstItem="ntJ-D0-mKP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="j7c-ei-hm3" secondAttribute="trailing" constant="15" id="Upa-8Q-knj"/>
@@ -223,6 +222,7 @@
                             <constraint firstItem="j7c-ei-hm3" firstAttribute="leading" secondItem="U7g-3m-W5j" secondAttribute="trailing" constant="15" id="guk-9f-lsY"/>
                             <constraint firstAttribute="centerX" secondItem="fGV-Ae-1Ue" secondAttribute="centerX" id="iZ6-DJ-JOq"/>
                             <constraint firstItem="j7c-ei-hm3" firstAttribute="centerY" secondItem="oz1-TY-1jU" secondAttribute="centerY" id="ij2-nR-m3N"/>
+                            <constraint firstAttribute="centerX" secondItem="qpC-Ra-1Ta" secondAttribute="centerX" id="jtB-KH-JL5"/>
                             <constraint firstItem="mbA-CH-f4e" firstAttribute="top" secondItem="GOq-ai-2k9" secondAttribute="bottom" constant="8" id="lvA-QW-PpS"/>
                             <constraint firstItem="j7c-ei-hm3" firstAttribute="centerY" secondItem="U7g-3m-W5j" secondAttribute="centerY" id="p98-Ps-QA4"/>
                             <constraint firstItem="q4c-Zy-y1a" firstAttribute="leading" secondItem="Vua-6V-eev" secondAttribute="leadingMargin" constant="45" id="qUA-xb-S6p"/>
@@ -244,6 +244,20 @@
                         </variation>
                     </view>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="pqV-Ph-fQd">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="1uO-XP-2IH">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="sJD-DB-fay">
+                                <rect key="frame" x="416" y="76" width="33" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="EDIT">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="4tt-3D-ngr" kind="presentation" identifier="goToEditGroup" id="UBF-US-gXS"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="confirmedPlayersLabel" destination="ntJ-D0-mKP" id="Ksf-NQ-O0a"/>
@@ -257,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cp-pz-qeS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="514"/>
+            <point key="canvasLocation" x="1562" y="530"/>
         </scene>
         <!--Match Players List View Controller-->
         <scene sceneID="RpL-rr-1d3">
@@ -291,7 +305,25 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LOM-bi-T3Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="1364"/>
+            <point key="canvasLocation" x="1080" y="1334"/>
+        </scene>
+        <!--Friend Picker View Controller-->
+        <scene sceneID="9Ix-Qp-BCS">
+            <objects>
+                <viewController modalPresentationStyle="currentContext" id="Wj6-hI-k5y" customClass="FBFriendPickerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a0P-6a-qO1"/>
+                        <viewControllerLayoutGuide type="bottom" id="azc-Jw-Tjk"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ipc-JE-xeh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M3j-Kh-dcs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1864" y="1319"/>
         </scene>
         <!--Add new group-->
         <scene sceneID="jeQ-pc-rDr">
@@ -311,7 +343,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UqF-7j-4IJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UqF-7j-4IJ">
                                 <rect key="frame" x="75" y="72" width="493" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -319,19 +351,19 @@
                                     <action selector="enterPressOnNameTextField:" destination="EBD-Xx-W0b" eventType="editingDidEndOnExit" id="QrI-Zc-g6d"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQr-Wg-wAk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQr-Wg-wAk">
                                 <rect key="frame" x="16" y="110" width="41" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56w-wc-fJT">
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="56w-wc-fJT">
                                 <rect key="frame" x="16" y="139" width="568" height="162"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="162" id="99D-Ui-qpb"/>
                                 </constraints>
                             </pickerView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="BSV-DT-1LC">
+                            <datePicker contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" translatesAutoresizingMaskIntoConstraints="NO" id="BSV-DT-1LC">
                                 <rect key="frame" x="16" y="309" width="584" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="432319975.39332598">
                                     <!--2014-09-13 16:52:55 +0000-->

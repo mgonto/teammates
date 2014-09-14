@@ -24,4 +24,8 @@ protocol SessionService {
         get
     }
     
+    var session : FBSession? {
+        get
+    }
+    
 }

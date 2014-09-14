@@ -12,7 +12,7 @@ class ParseSessionService: SessionService {
     
     private let permissions = ["public_profile", "email", "user_friends"]
     
-    private var session: FBSession? {
+    var session: FBSession? {
         get {
             return PFFacebookUtils.session()
         }

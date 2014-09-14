@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlayerGroupViewController: UIViewController {
+class PlayerGroupViewController: UIViewController, FBFriendPickerDelegate {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -33,6 +33,9 @@ class PlayerGroupViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let fbCache = FBFriendPickerViewController.cacheDescriptor()
+        fbCache.prefetchAndCacheForSession(sessionService.session!)
         // Do any additional setup after loading the view.
     }
     
@@ -68,13 +71,40 @@ class PlayerGroupViewController: UIViewController {
         self.playerGroup.setAsNonPlayer(myPlayer)
         self.reloadUI()
     }
+    
+
+    
+    
+    func friendPickerViewController(friendPicker: FBFriendPickerViewController!, handleError error: NSError!) {
+        NSLog("There was an error fetching the users")
+    }
+    
+    func facebookViewControllerDoneWasPressed(sender: AnyObject!) {
+        let picker = sender as FBFriendPickerViewController
+        
+        for friend in picker.selection {
+            playerGroup.addMember(Player.fromFriend(friend as FBGraphObject))
+        }
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func facebookViewControllerCancelWasPressed(sender: AnyObject!) {
+        let picker = sender as FBFriendPickerViewController
+        picker.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
 
     // MARK: - Navigation
 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if (segue.identifier == "goToMatchPlayersList") {
             (segue.destinationViewController as MatchPlayersListViewController).playerGroup = playerGroup
+        } else if (segue.identifier == "showFriends") {
+            let controller = segue.destinationViewController as FBFriendPickerViewController
+            controller.title = "Invite friends to the match"
+            controller.delegate = self
+            controller.loadData()
         }
     }
-
 }
