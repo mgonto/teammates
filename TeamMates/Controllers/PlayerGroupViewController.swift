@@ -41,10 +41,20 @@ class PlayerGroupViewController: UIViewController {
 
     // MARK: - Navigation
 
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == "goToMatchPlayersList") {
-            (segue.destinationViewController as MatchPlayersListViewController).playerGroup = playerGroup
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {       
+        switch (segue.identifier) {
+            case "goToMatchPlayersList":
+                (segue.destinationViewController as MatchPlayersListViewController).playerGroup = playerGroup
+            case "goToEditPlayerGroup":
+                let navigationVC = (segue.destinationViewController as UINavigationController)
+                (navigationVC.visibleViewController as PlayerGroupSettingsViewController).setInEditMode(playerGroup)
+            default:
+                return
         }
+    }
+    
+    @IBAction func unwindFromEditGroup(segue: UIStoryboardSegue) {
+        
     }
 
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -187,7 +186,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="4tt-3D-ngr" kind="presentation" identifier="goToEditGroup" id="UBF-US-gXS"/>
+                                    <segue destination="4tt-3D-ngr" kind="presentation" identifier="goToEditPlayerGroup" modalPresentationStyle="currentContext" id="UBF-US-gXS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -290,7 +289,7 @@
         <!--Add new group-->
         <scene sceneID="jeQ-pc-rDr">
             <objects>
-                <viewController title="Add new group" id="EBD-Xx-W0b" customClass="AddPlayerGroupViewController" customModule="TeamMates" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Add new group" id="EBD-Xx-W0b" customClass="PlayerGroupSettingsViewController" customModule="TeamMates" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pGk-Ld-omS"/>
                         <viewControllerLayoutGuide type="bottom" id="cDD-X4-R0I"/>
@@ -364,7 +363,7 @@
                     <navigationItem key="navigationItem" title="Add new group" id="KM9-wg-mip">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="qpc-ec-mWJ">
                             <connections>
-                                <segue destination="Fie-sE-hPx" kind="unwind" identifier="" unwindAction="unwindFromAddPlayerGroup:" id="0Sj-C7-kFW"/>
+                                <action selector="goBack:" destination="EBD-Xx-W0b" id="SZX-G3-MlD"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" style="done" systemItem="done" id="p4E-gV-uyo">
@@ -377,14 +376,15 @@
                         <outlet property="dayOfWeekPickerView" destination="56w-wc-fJT" id="XrG-Na-AoT"/>
                         <outlet property="hourPickerView" destination="BSV-DT-1LC" id="N3r-np-bcq"/>
                         <outlet property="nameTextField" destination="UqF-7j-4IJ" id="O3W-di-lfH"/>
-                        <segue destination="Fie-sE-hPx" kind="unwind" identifier="goToPlayerGroupList" unwindAction="unwindFromAddPlayerGroup:" id="8PL-DN-iUX"/>
+                        <segue destination="Fie-sE-hPx" kind="unwind" identifier="goToPlayerGroupList" unwindAction="unwindFromAddPlayerGroup:" id="DW6-GU-lLE"/>
+                        <segue destination="Fie-sE-hPx" kind="unwind" identifier="goToPlayerGroupDashboard" unwindAction="unwindFromEditGroup:" id="9Ly-NE-SGx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="h1j-du-Zgt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="Fie-sE-hPx" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="min-TX-wcy"/>
             </objects>
-            <point key="canvasLocation" x="3106" y="514"/>
+            <point key="canvasLocation" x="3015" y="458"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -440,7 +440,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YbJ-ga-u8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2401" y="514"/>
+            <point key="canvasLocation" x="2247" y="458"/>
         </scene>
     </scenes>
     <resources>

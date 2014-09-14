@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0120E4B519C518E900A4E9E9 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0120E4B419C518E900A4E9E9 /* DateHelper.swift */; };
 		01C4FD6119C4C9810036F113 /* MatchPlayersListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4FD6019C4C9810036F113 /* MatchPlayersListViewController.swift */; };
 		01C4FD6319C4EB0D0036F113 /* PlayerGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C4FD6219C4EB0D0036F113 /* PlayerGroupViewController.swift */; };
 		089EA4CE331242BBB00F2BCD /* libPods-TeamMates.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF925A1BC878413B8BB35E38 /* libPods-TeamMates.a */; };
@@ -26,7 +27,7 @@
 		9DE836C119C4A39B00536D15 /* PlayerGroupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836C019C4A39B00536D15 /* PlayerGroupRepository.swift */; };
 		9DE836C519C4A52200536D15 /* InMemoryPlayerGroupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836C419C4A52200536D15 /* InMemoryPlayerGroupRepository.swift */; };
 		9DE836C919C4A95E00536D15 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836C819C4A95E00536D15 /* Application.swift */; };
-		9DE836CB19C4AEBA00536D15 /* AddPlayerGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836CA19C4AEBA00536D15 /* AddPlayerGroupViewController.swift */; };
+		9DE836CB19C4AEBA00536D15 /* PlayerGroupSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836CA19C4AEBA00536D15 /* PlayerGroupSettingsViewController.swift */; };
 		9DE836D019C4C9FA00536D15 /* ParsePlayerGroupRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836CF19C4C9FA00536D15 /* ParsePlayerGroupRepository.swift */; };
 		9DE836D319C4CB3C00536D15 /* PlayerGroupParseSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836D219C4CB3C00536D15 /* PlayerGroupParseSerializer.swift */; };
 		9DE836D619C4CF1300536D15 /* ParseExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DE836D519C4CF1300536D15 /* ParseExtensions.swift */; };
@@ -47,6 +48,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0120E4B419C518E900A4E9E9 /* DateHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DateHelper.swift; path = Helpers/DateHelper.swift; sourceTree = "<group>"; };
 		01C4FD6019C4C9810036F113 /* MatchPlayersListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MatchPlayersListViewController.swift; path = Controllers/MatchPlayersListViewController.swift; sourceTree = "<group>"; };
 		01C4FD6219C4EB0D0036F113 /* PlayerGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerGroupViewController.swift; path = Controllers/PlayerGroupViewController.swift; sourceTree = "<group>"; };
 		97C2ECE573BB496AA1CD23B0 /* Pods-TeamMates.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeamMates.xcconfig"; path = "Pods/Pods-TeamMates.xcconfig"; sourceTree = "<group>"; };
@@ -70,7 +72,7 @@
 		9DE836C019C4A39B00536D15 /* PlayerGroupRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerGroupRepository.swift; sourceTree = "<group>"; };
 		9DE836C419C4A52200536D15 /* InMemoryPlayerGroupRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InMemoryPlayerGroupRepository.swift; sourceTree = "<group>"; };
 		9DE836C819C4A95E00536D15 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
-		9DE836CA19C4AEBA00536D15 /* AddPlayerGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddPlayerGroupViewController.swift; path = Controllers/AddPlayerGroupViewController.swift; sourceTree = "<group>"; };
+		9DE836CA19C4AEBA00536D15 /* PlayerGroupSettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayerGroupSettingsViewController.swift; path = Controllers/PlayerGroupSettingsViewController.swift; sourceTree = "<group>"; };
 		9DE836CC19C4C93E00536D15 /* TeamMates-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TeamMates-Bridging-Header.h"; sourceTree = "<group>"; };
 		9DE836CF19C4C9FA00536D15 /* ParsePlayerGroupRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParsePlayerGroupRepository.swift; sourceTree = "<group>"; };
 		9DE836D219C4CB3C00536D15 /* PlayerGroupParseSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerGroupParseSerializer.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 				9D1A037F19C48EFB004098CA /* Supporting Files */,
 				9DE836C819C4A95E00536D15 /* Application.swift */,
 				9DE836CC19C4C93E00536D15 /* TeamMates-Bridging-Header.h */,
+				0120E4B419C518E900A4E9E9 /* DateHelper.swift */,
 			);
 			path = TeamMates;
 			sourceTree = "<group>";
@@ -182,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				9D1A03AF19C4995E004098CA /* PlayerGroupTableViewController.swift */,
-				9DE836CA19C4AEBA00536D15 /* AddPlayerGroupViewController.swift */,
+				9DE836CA19C4AEBA00536D15 /* PlayerGroupSettingsViewController.swift */,
 				9AAD58C319C4EA38007F1617 /* LoginViewController.swift */,
 				9AAD58C919C4F165007F1617 /* MainTabBarViewController.swift */,
 				01C4FD6019C4C9810036F113 /* MatchPlayersListViewController.swift */,
@@ -382,7 +385,7 @@
 				9DE836DD19C4D6ED00536D15 /* SessionService.swift in Sources */,
 				9DE836DF19C4D7C600536D15 /* ParseSessionService.swift in Sources */,
 				9D1A03A619C4927A004098CA /* DayOfWeek.swift in Sources */,
-				9DE836CB19C4AEBA00536D15 /* AddPlayerGroupViewController.swift in Sources */,
+				9DE836CB19C4AEBA00536D15 /* PlayerGroupSettingsViewController.swift in Sources */,
 				9D1A03B019C4995E004098CA /* PlayerGroupTableViewController.swift in Sources */,
 				9DE836D819C4D14600536D15 /* Model.swift in Sources */,
 				9DE836C119C4A39B00536D15 /* PlayerGroupRepository.swift in Sources */,
@@ -393,6 +396,7 @@
 				9DE836D619C4CF1300536D15 /* ParseExtensions.swift in Sources */,
 				9D1A03A919C495EA004098CA /* Player.swift in Sources */,
 				9DE836DA19C4D1EA00536D15 /* ParseSerializerHelper.swift in Sources */,
+				0120E4B519C518E900A4E9E9 /* DateHelper.swift in Sources */,
 				9AAD58C619C4EB1F007F1617 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
