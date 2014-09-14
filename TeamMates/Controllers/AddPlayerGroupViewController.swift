@@ -15,6 +15,7 @@ class AddPlayerGroupViewController: UIViewController, UIPickerViewDataSource, UI
     @IBOutlet weak var hourPickerView: UIDatePicker!
     
     let playerGroupRepository = Application.sharedInstance.playerGroupRepository
+    let sessionService = Application.sharedInstance.sessionService
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,6 +58,7 @@ class AddPlayerGroupViewController: UIViewController, UIPickerViewDataSource, UI
         let dayNumber = self.dayOfWeekPickerView.selectedRowInComponent(0)
         let dayOfWeek = DayOfWeek.fromNumber(dayNumber)
         var group = PlayerGroup(self.nameTextField.text, components.hour, components.minute, dayOfWeek)
+        group.addMember(Player.fromUser(sessionService.currentUser!))
         playerGroupRepository.save(group, callback: { (errorOpt, groupOpt) -> () in
             if let error = errorOpt {
                 NSLog("There was an error creating a group \(error)")
