@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "TeamMates": {
+            "applicationId": "0QdMEXIWIO1climwC5f5wUFx4ajgyWzK83s3JUSK", 
+            "masterKey": "SVRvydQenBVOxWOjeuFK5OcCFa2ovOr3TjzdPPKA"
+        }, 
+        "_default": {
+            "link": "TeamMates"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.0"
+    }
+}
