@@ -62,7 +62,7 @@ class PlayerGroupViewController: UIViewController, FBFriendPickerDelegate {
     
     
     @IBAction func participateInGame(sender: AnyObject) {
-        self.playerGroup.setAsAddPlayer(myPlayer)
+        self.playerGroup.setAsPlayer(myPlayer)
         self.reloadUI()
     }
     
